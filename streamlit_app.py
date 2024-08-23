@@ -29,11 +29,11 @@ ingredients_list = st.multiselect(
     , my_dataframe
     , max_selections=5
 )
-st.write(my_dataframe)
-pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
-st.write(pd_df)
-st.stop()
+# st.write(my_dataframe)
+# pd_df = my_dataframe.to_pandas()
+# st.dataframe(pd_df)
+# st.write(pd_df)
+# st.stop()
 
 # st.write("You selected:", ingredients_list)
 if ingredients_list:
