@@ -33,8 +33,8 @@ ingredients_list = st.multiselect(
 # st.write(my_dataframe)
 pd_df = my_dataframe.to_pandas()
 # st.dataframe(pd_df)
-# st.write(pd_df)
-# st.stop()
+st.write(pd_df)
+st.stop()
 
 # st.write("You selected:", ingredients_list)
 if ingredients_list:
@@ -44,7 +44,7 @@ if ingredients_list:
         ingredients_string += fruit_chosen + ' '
         
         # search_on = pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON']
-        search_on = pd_df[['FRUIT_NAME']==fruit_chosen]
+        search_on = pd_df[]
         st.write(search_on)
         st.stop()
         
