@@ -21,8 +21,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARC
 # st.dataframe(data=my_dataframe, use_container_width=True)
 # st.stop()
 
-pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
+
 
 
 ingredients_list = st.multiselect(
@@ -30,6 +29,9 @@ ingredients_list = st.multiselect(
     , my_dataframe
     , max_selections=5
 )
+
+pd_df = my_dataframe.to_pandas()
+# st.dataframe(pd_df)
 
 # st.write("You selected:", ingredients_list)
 if ingredients_list:
