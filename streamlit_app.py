@@ -31,7 +31,8 @@ ingredients_list = st.multiselect(
 )
 
 pd_df = my_dataframe.to_pandas()
-# st.dataframe(pd_df)
+st.dataframe(pd_df)
+st.stop()
 
 # st.write("You selected:", ingredients_list)
 if ingredients_list:
