@@ -24,12 +24,12 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 # st.write(my_dataframe)
 pd_df = my_dataframe.to_pandas()
-st.write(pd_df['FRUIT_NAME'])
-st.stop()
+# st.write(pd_df['FRUIT_NAME'])
+# st.stop()
 
 ingredients_list = st.multiselect(
     "Choose 5 options for your smoothie :"
-    , my_dataframe
+    , pd_df['FRUIT_NAME']
     , max_selections=5
 )
 
