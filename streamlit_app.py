@@ -27,7 +27,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 ingredients_list = st.multiselect(
     "Choose 5 options for your smoothie :"
-    , my_dataframe[0]
+    , my_dataframe['FRUIT_NAME']
     , max_selections=5
 )
 # st.write(my_dataframe)
