@@ -42,3 +42,6 @@ if ingredients_list:
     if TIME_TO_INSERT:
         session.sql(my_insert_stmt).collect()
         st.success('Thank you '+title+', your Smoothie is ordered!', icon="✅")
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
